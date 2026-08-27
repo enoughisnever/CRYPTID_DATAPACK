@@ -93,10 +93,6 @@ execute as @s[tag=player.tutorial] run function cryptid:tick/player/tutorial/sta
 
 
 
-##random tape
-execute if score .global cryptid.day matches 20 if entity @s[tag=!cryptid.lore.tape,scores={cryptid.player.harmony=..-10000}] run function cryptid:action/give/spawntape
-execute if score .global cryptid.day matches 20 if entity @s[tag=!cryptid.lore.tape,scores={cryptid.player.harmony=..-10000}] run tag @s add cryptid.lore.tape
-
 
 ##playing certain radio sounds radio sound controller
 

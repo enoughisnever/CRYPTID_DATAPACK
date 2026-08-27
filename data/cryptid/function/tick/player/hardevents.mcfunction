@@ -9,6 +9,9 @@ execute if score .global cryptid.day matches 2 run function cryptid:events/crypt
 execute if score .global cryptid.day matches 4 run function cryptid:events/cryptid/tortured
 execute if score .global cryptid.day matches 4 run title @a actionbar ["",{"text":"\ua022 ","font":"minecraft:images"},{"translate":"cryptid.radio.prefix","color":"red"},{"translate":"cryptid.event.day4.tortured_soul","color":"dark_red"}]
 
+##random tape
+execute if score .global cryptid.day matches 5 run function cryptid:action/give/spawntape
+
 execute if score .global cryptid.day matches 6 run function cryptid:events/cryptid/fractal
 execute if score .global cryptid.day matches 6 run title @a actionbar ["",{"text":"\ua022 ","font":"minecraft:images"},{"translate":"cryptid.radio.prefix","color":"red"},{"translate":"cryptid.event.day6.fractal","color":"dark_red"}]
 

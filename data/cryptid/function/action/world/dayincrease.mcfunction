@@ -1,4 +1,5 @@
 scoreboard players set .current cryptid.eventcap 0
+tellraw @a ["",{"text":"Day ","color":"red"},{"score":{"name":".global","objective":"cryptid.day"},"color":"red"},{"text":" survived","color":"red"}]
 scoreboard players add .global cryptid.day 1
 execute store result score .random cryptid.player.random run random value 1..5
 execute if score .random cryptid.player.random matches 1..2 run execute as @e[tag=cryptid, type=!player, sort=random, limit=5, tag=!cryptid.lessertotem,tag=!cryptid.totem2,tag=!cryptid.eldertree] at @s run function cryptid:events/quietkill
@@ -13,7 +14,6 @@ kill @e[tag=cryptid.spawner]
 
 
 ##cool events
-
 tellraw @a ["",{"translate":"chat.cryptid.survival.day_prefix","color":"red"},{"score":{"name":".global","objective":"cryptid.day"},"color":"red"},{"translate":"chat.cryptid.survival.day_suffix","color":"red"}]
 execute as @a at @s run playsound minecraft:cryptid.congratulations ambient @s ~ ~100 ~ 1000 1
 execute as @a[sort=random, limit=2] at @s run function cryptid:events/cryptid/flicker5
