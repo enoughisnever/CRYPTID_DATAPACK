@@ -2,7 +2,7 @@
     "condition": "all_of",
     "terms": [
 
-     { "condition": "minecraft:location_check", "offsetX": 0, "offsetY": 0, "offsetZ": 0, "predicate": { "block": { "blocks": "minecraft:red_concrete"} } }, 
+     { "condition": "minecraft:location_check", "offsetX": 0, "offsetY": 0, "offsetZ": 0, "predicate": { "block": { "blocks": "minecraft:redstone_block"} } }, 
 
      { "condition": "minecraft:location_check", "offsetX": -1, "offsetY": 0, "offsetZ": 0,  "predicate": { "block": { "blocks": "redstone_wire" } } }, 
      { "condition": "minecraft:location_check", "offsetX": 1,  "offsetY": 0, "offsetZ": 0,  "predicate": { "block": { "blocks": "redstone_wire" } } }, 
@@ -17,7 +17,32 @@
      { "condition": "minecraft:location_check", "offsetX": -2, "offsetY": 0, "offsetZ": 0,  "predicate": { "block": { "blocks": "iron_block" } } }, 
      { "condition": "minecraft:location_check", "offsetX": 2,  "offsetY": 0, "offsetZ": 0,  "predicate": { "block": { "blocks": "iron_block" } } }, 
      { "condition": "minecraft:location_check", "offsetX": 0,  "offsetY": 0, "offsetZ": 2,  "predicate": { "block": { "blocks": "iron_block" } } }, 
-     { "condition": "minecraft:location_check", "offsetX": 0, "offsetY": 0, "offsetZ": -2,  "predicate": { "block": { "blocks": "iron_block" } } } 
+     { "condition": "minecraft:location_check", "offsetX": 0, "offsetY": 0, "offsetZ": -2,  "predicate": { "block": { "blocks": "iron_block" } } },
+     
+     {
+        "condition": "any_of",
+        "terms": [
+            {"condition": "all_of",
+        "terms": [
+     { "condition": "minecraft:location_check", "offsetX": -2, "offsetY": 0, "offsetZ": -1,  "predicate": { "block": { "blocks": "nether_wart_block" } } }, 
+     { "condition": "minecraft:location_check", "offsetX": 2,  "offsetY": 0, "offsetZ": 1,  "predicate": { "block": { "blocks": "nether_wart_block" } } }, 
+     { "condition": "minecraft:location_check", "offsetX": -1,  "offsetY": 0, "offsetZ": 2,  "predicate": { "block": { "blocks": "nether_wart_block" } } }, 
+     { "condition": "minecraft:location_check", "offsetX": 1, "offsetY": 0, "offsetZ": -2,  "predicate": { "block": { "blocks": "nether_wart_block" } } }
+ 
+        ]
+    },
+            {"condition": "all_of",
+        "terms": [
+     { "condition": "minecraft:location_check", "offsetX": -2, "offsetY": 0, "offsetZ": 1,  "predicate": { "block": { "blocks": "nether_wart_block" } } }, 
+     { "condition": "minecraft:location_check", "offsetX": 2,  "offsetY": 0, "offsetZ": -1,  "predicate": { "block": { "blocks": "nether_wart_block" } } }, 
+     { "condition": "minecraft:location_check", "offsetX": 1,  "offsetY": 0, "offsetZ": 2,  "predicate": { "block": { "blocks": "nether_wart_block" } } }, 
+     { "condition": "minecraft:location_check", "offsetX": -1, "offsetY": 0, "offsetZ": -2,  "predicate": { "block": { "blocks": "nether_wart_block" } } }
+ 
+        ]
+    }
+        ]
+
+     }
 
       ]
 }

@@ -6,12 +6,13 @@
     }
   ],
   "placement": {
-    "type": "minecraft:random_spread",
-    "spacing": 250,
-    "separation": 80,
-    "salt": 113746277,
-    "spread_type": "linear",
-    "frequency": 0.1
+    "type": "concentric_rings",
+    "spread": 1,
+    "count": 1,
+    "distance": 32,
+    "preferred_biomes": "#minecraft:stronghold_biased_to",
+    "frequency": 1,
+    "salt": 0
 
   }
 }
