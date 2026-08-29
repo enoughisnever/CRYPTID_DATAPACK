@@ -70,7 +70,8 @@ execute as @s if items entity @s inventory.* sugar[minecraft:custom_data~{crypti
 ##axe envets tick
 execute as @s at @s[scores={cryptid.click=1}] unless score @s cryptid.axe.cooldown matches 0.. if items entity @s weapon.* minecraft:warped_fungus_on_a_stick[minecraft:custom_data~{cryptid.axe:1b}] run function cryptid:action/axe/swing
 execute as @s at @s[scores={cryptid.damagedealt2=1..}] if items entity @s weapon.* minecraft:warped_fungus_on_a_stick[minecraft:custom_data~{cryptid.axe:1b}] run function cryptid:action/axe/entitycheck
-
+execute if score @s cryptid.axe.cooldown matches ..-3 if items entity @s weapon.* minecraft:warped_fungus_on_a_stick[custom_data~{cryptid.axe:1b}] run function cryptid:action/axe/icon
+execute if score @s cryptid.axe.cooldown matches ..-40 if items entity @s weapon.* minecraft:warped_fungus_on_a_stick[custom_data~{cryptid.axe:1b}] run function cryptid:action/axe/reset
 execute if items entity @s[scores={cryptid.axe.cooldown=-40..-1}] weapon.* minecraft:warped_fungus_on_a_stick[custom_data~{cryptid.axe:1b}] if score @s cryptid.axe.swings matches ..0 run particle block{block_state:nether_wart_block} ~ ~1 ~ 0.1 0.1 0.1 0.1 1
 
 
