@@ -1,6 +1,9 @@
 scoreboard players set .current cryptid.eventcap 0
 tellraw @a ["",{"text":"Day ","color":"red"},{"score":{"name":".global","objective":"cryptid.day"},"color":"red"},{"text":" survived","color":"red"}]
 scoreboard players add .global cryptid.day 1
+
+execute as @a at @s if predicate cryptid:check_sky run scoreboard players add @s cryptid.player.harmony 2000
+
 execute store result score .random cryptid.player.random run random value 1..5
 execute if score .random cryptid.player.random matches 1..2 run execute as @e[tag=cryptid, type=!player, sort=random, limit=5, tag=!cryptid.lessertotem,tag=!cryptid.totem2,tag=!cryptid.eldertree] at @s run function cryptid:events/quietkill
 execute if score .random cryptid.player.random matches 1..3 run scoreboard players add .global cryptid.eventcap 1

@@ -26,6 +26,10 @@ execute as @s[tag=!cryptid.info.cryptid] at @s if entity @e[tag=cryptid, distanc
 execute as @s[tag=!cryptid.info.heart] at @s if entity @s[scores={cryptid.player.heart.distance=..40}] run tellraw @s {"translate":"cryptid.info.heart","color":"dark_red"}
 execute as @s[tag=!cryptid.info.heart] at @s if entity @s[scores={cryptid.player.heart.distance=..40}] run tag @s add cryptid.info.heart
 
+##eldertree info
+execute as @s[tag=!cryptid.info.eldertree] at @s if entity @s[tag=cryptid.eldertree] run tellraw @s {"text":"You must forge an axe from suffering if you want to get rid of that foul tree","color":"dark_red"}
+execute as @s[tag=!cryptid.info.eldertree] at @s if entity @s[tag=cryptid.eldertree] run tag @s add cryptid.info.eldertree
+
 ###item info
 execute as @s[tag=!cryptid.info.items] at @s if score .global cryptid.day matches 3.. run tellraw @s {"translate":"cryptid.info.items","color":"dark_red"}
 execute as @s[tag=!cryptid.info.items] at @s if score .global cryptid.day matches 3.. run tag @s add cryptid.info.items
