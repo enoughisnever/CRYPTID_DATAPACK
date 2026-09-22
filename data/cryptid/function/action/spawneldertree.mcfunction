@@ -1,3 +1,4 @@
+execute unless entity @e[type=marker,tag=spawn.scan, sort=nearest, limit=1] run summon marker ~ ~ ~ {Tags:["spawn.scan"]}
 
 execute unless entity @e[type=marker,tag=spawn.scan, sort=nearest, limit=1] run summon marker ~ ~ ~ {Tags:["spawn.scan"]}
 
