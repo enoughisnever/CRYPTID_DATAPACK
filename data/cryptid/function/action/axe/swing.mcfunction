@@ -14,6 +14,8 @@ playsound minecraft:cryptid.axe.draw ambient @a ~ ~1 ~ 1 1.2
 
 
 
+execute if items entity @s weapon.mainhand warped_fungus_on_a_stick[minecraft:custom_data~{cryptid.axe:1b}] run item modify entity @s weapon.mainhand cryptid:setaxe2
+execute if items entity @s weapon.offhand warped_fungus_on_a_stick[minecraft:custom_data~{cryptid.axe:1b}] run item modify entity @s weapon.offhand cryptid:setaxe2
 
 ## Summon blade
 execute anchored eyes run summon item_display ^ ^ ^1 {Tags:["cryptid","cryptid.axeproj","cryptid.ignore.totemward","cryptid.ignore.radar","cryptid.timer"],id:"minecraft:item_display",item:{id:"minecraft:air",Count:1},item_display:"none"}

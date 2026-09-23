@@ -1,0 +1,20 @@
+[
+  {
+  "function": "minecraft:set_custom_model_data",
+  "value": 1315,
+  "conditions": []
+  
+},
+{
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.attack_speed",
+        "id": "1747965463539",
+        "amount": -10,
+        "operation": "add_value",
+        "slot": "mainhand"
+      }
+    ]
+  }
+]

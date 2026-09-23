@@ -40,7 +40,8 @@
         { "type": "minecraft:item", "name": "minecraft:stone", "weight": 9, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "cryptid/builder1", "fury" : 100 } } ] },
         { "type": "minecraft:item", "name": "minecraft:stone", "weight": 10, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "cryptid/fractal", "fury" : 300  } } ] },
         { "type": "minecraft:item", "name": "minecraft:stone", "weight": 15, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "cryptid/sethostile", "fury" : 200  } } ] },
-        { "type": "minecraft:item", "name": "minecraft:stone", "weight": 9, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "cryptid/flicker5", "fury" : 150 } } ] },
+        { "type": "minecraft:item", "name": "minecraft:stone", "weight": 9, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "cryptid/flicker5", "fury" : 150 } } ] },,
+        { "type": "minecraft:item", "name": "minecraft:stone", "weight": 5, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "spawneldertree", "fury" : 2000 } } ] },
         { "type": "minecraft:item", "name": "minecraft:stone", "weight": 12, "functions": [ { "function": "minecraft:set_custom_data", "tag": { "event": "cryptid/chomper", "fury" : 1100  } } ] }
 
       ]

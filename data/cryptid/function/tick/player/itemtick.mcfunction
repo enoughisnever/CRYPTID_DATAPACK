@@ -70,7 +70,8 @@ execute as @s if items entity @s inventory.* sugar[minecraft:custom_data~{crypti
 ##axe envets tick
 execute as @s at @s[scores={cryptid.click=1}] unless score @s cryptid.axe.cooldown matches 0.. if items entity @s weapon.* minecraft:warped_fungus_on_a_stick[minecraft:custom_data~{cryptid.axe:1b}] run function cryptid:action/axe/swing
 execute as @s at @s[scores={cryptid.damagedealt2=1..}] if items entity @s weapon.* minecraft:warped_fungus_on_a_stick[minecraft:custom_data~{cryptid.axe:1b}] run function cryptid:action/axe/entitycheck
-
+execute if score @s cryptid.axe.cooldown matches ..-3 if items entity @s weapon.* minecraft:warped_fungus_on_a_stick[custom_data~{cryptid.axe:1b}] run function cryptid:action/axe/icon
+execute if score @s cryptid.axe.cooldown matches ..-40 if items entity @s weapon.* minecraft:warped_fungus_on_a_stick[custom_data~{cryptid.axe:1b}] run function cryptid:action/axe/reset
 execute if items entity @s[scores={cryptid.axe.cooldown=-40..-1}] weapon.* minecraft:warped_fungus_on_a_stick[custom_data~{cryptid.axe:1b}] if score @s cryptid.axe.swings matches ..0 run particle block{block_state:nether_wart_block} ~ ~1 ~ 0.1 0.1 0.1 0.1 1
 
 
@@ -151,13 +152,8 @@ execute unless score @s cryptid.player.titlecooldown matches -2147483648..214748
 execute unless score @s cryptid.player.titlecooldown matches -2147483648..2147483647 if items entity @s weapon.offhand sugar[minecraft:custom_data~{cryptid.compass:1b}] run function cryptid:tick/player/harmonycheck
 
 ##disc1
-execute as @s[scores={cryptid.click=1..}] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data~{cryptid.tape:1b}] run playsound cryptid.disc1 ambient @a[distance=0..30] ~ ~ ~ 1200 1 1
-execute as @s[scores={cryptid.click=1..}] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data~{cryptid.tape:1b}] run time add 3000
-execute as @s[scores={cryptid.click=1..}] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data~{cryptid.tape:1b}] run tellraw @s {"translate":"cryptid.item.tape.crumbles","color":"dark_red"}
-
-
-
-execute as @s[scores={cryptid.click=1..}] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data~{cryptid.tape:1b}] run item replace entity @s weapon.mainhand with air
+execute as @s[scores={cryptid.click=1..}] if items entity @s weapon.mainhand minecraft:warped_fungus_on_a_stick[minecraft:custom_data~{cryptid.tape:1b}] run function cryptid:action/player/usetape
+execute as @s[tag=!cryptid.disc1] if items entity @s weapon.* minecraft:warped_fungus_on_a_stick[minecraft:custom_data~{cryptid.tape:1b}] run tag @s add cryptid.disc1
 
 
 ###use totem2

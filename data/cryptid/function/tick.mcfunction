@@ -13,7 +13,7 @@ execute if score .global cryptid.world.fury matches 500.. run function cryptid:t
 
 ##guaranteed events
 execute if score .global cryptid.day matches 30 if score .globaltime cryptid.time matches 3000 run function cryptid:action/portal/create
-execute if score .globaltime cryptid.time matches 6100 run execute as @r at @s run function cryptid:tick/player/hardevents
+execute if score .globaltime cryptid.time matches 6100 as @r at @s run function cryptid:tick/player/hardevents
 
 
 ##pillartimer

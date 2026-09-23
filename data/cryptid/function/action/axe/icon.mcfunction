@@ -1,0 +1,2 @@
+execute if items entity @s weapon.mainhand warped_fungus_on_a_stick[minecraft:custom_data~{cryptid.axe:1b}] run item modify entity @s weapon.mainhand cryptid:setaxe1
+execute if items entity @s weapon.offhand warped_fungus_on_a_stick[minecraft:custom_data~{cryptid.axe:1b}] run item modify entity @s weapon.offhand cryptid:setaxe1

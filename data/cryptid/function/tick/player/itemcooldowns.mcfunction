@@ -3,7 +3,7 @@ execute if score @s cryptid.pick.cooldown matches ..0 run scoreboard players res
 execute if score @s cryptid.item.lantern.cooldown matches ..0 run scoreboard players reset @s cryptid.item.lantern.cooldown
 execute if score @s cryptid.shotgun.cooldown matches ..0 run scoreboard players reset @s cryptid.shotgun.cooldown
 execute if score @s cryptid.player.titlecooldown matches ..0 run scoreboard players reset @s cryptid.player.titlecooldown
-execute if score @s cryptid.axe.cooldown matches ..-40 run function cryptid:action/axe/reset
+
 
 ##count
 execute if score @s cryptid.pick.cooldown matches 1.. run scoreboard players remove @s cryptid.pick.cooldown 1
